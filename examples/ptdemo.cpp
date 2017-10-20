@@ -32,11 +32,11 @@
 #include <map>
 #include <iomanip>
 
-#include "custom_types.h"
-#include "ptsampler.h"
-#include "mhsampler.h"
-#include "linalg.h"
-#include "rand_helpers.h"
+#include "../src/custom_types.h"
+#include "../src/ptsampler.h"
+#include "../src/mhsampler.h"
+#include "../src/linalg.h"
+#include "../src/rand_helpers.h"
 
 
 // Returns a log probability density function with peaks at x = +- 1.

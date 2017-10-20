@@ -1,12 +1,11 @@
-AC_INIT([example], [0.1])
+AC_INIT([sampler-cpp], [0.1])
 
-AM_INIT_AUTOMAKE([-Wall foreign])
+AM_INIT_AUTOMAKE([-Wall foreign subdir-objects])
 
 AC_PROG_CXX
 
 AC_CONFIG_FILES([
   Makefile
-  src/Makefile
 ])
 
 AC_OUTPUT

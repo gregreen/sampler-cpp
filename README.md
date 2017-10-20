@@ -31,15 +31,15 @@ directory, type the following into a terminal:
     ./configure
     make
 
-There should then be an example script in the `src/` directory.
+There should then be two binaries in the base directory: `ptdemo` and `runtests`.
 
 
 Running the example
 ===================
 
-After compiling the project, you should be able to run the example with
+After compiling the project, you should be able to run the Parallel Tempo demo with
 
-    src/example
+    ./ptdemo
 
 This example will sample a multimodal distribution, and drop the results in
 ASCII files named `output/res_beta_?.txt`.
@@ -49,3 +49,16 @@ To plot the results, type
     python scripts/plot_pt_results.py output/res_beta_?.txt --output output/pt.png
 
 The plots will be written to `output/pt_*.png`.
+
+You can see the PT demo code in `examples/ptdemo.cpp`.
+
+
+Running the tests
+=================
+
+This project comes with tests to verify that various components function as desired.
+You can run these tests with
+
+    ./runtests
+
+You can see the testing code in the `tests/` directory.
