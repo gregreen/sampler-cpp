@@ -49,9 +49,12 @@ public:
     // const std::vector<double>& get_weights() const;
     shared_const_vector get_elements() const;
     shared_const_vector get_weights() const;
+    shared_const_vector get_lnL() const;
+    shared_const_vector get_ln_prior() const;
 
     shared_matrix calc_covariance() const;
     shared_vector calc_mean() const;
+    
     std::pair<shared_vector, shared_vector> calc_histogram(
         uint axis, double x0, double x1, uint n_bins, bool normalize=false) const;
 

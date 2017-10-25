@@ -159,6 +159,14 @@ shared_const_vector Chain::get_weights() const {
     return _w;
 }
 
+shared_const_vector Chain::get_lnL() const {
+    return _lnL;
+}
+
+shared_const_vector Chain::get_ln_prior() const {
+    return _ln_prior;
+}
+
 
 shared_matrix Chain::calc_covariance() const {
     return weighted_covariance(_x, _w, _n_dim);
