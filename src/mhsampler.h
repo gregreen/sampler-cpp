@@ -19,6 +19,16 @@
 #include "custom_types.h"
 
 
+struct MHTuningParameters {
+    int n_rounds=100;
+    int n_steps_per_round=100;
+    double accept=0.25;
+    double granularity=0.05;
+    double prop_persist=0.95;
+    double prop_epsilon=1.e-5;
+};
+
+
 class MHSampler {
 public:
     MHSampler(pdensity lnL, pdensity ln_prior, uint n_dim);
@@ -38,6 +48,8 @@ public:
                          double epsilon=1.e-5);
     void tune_step_size(double accept_target=0.25,
                         double granularity=0.1);
+
+    void tune_all(const MHTuningParameters& p);
 
     void force_step(std::shared_ptr<const State> s);
     void null_step();

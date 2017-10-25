@@ -123,10 +123,26 @@ void MHSampler::tune_step_size(double accept_target, double granularity) {
     double a = accept_frac();
     if(a < 0.8 * accept_target) {
         _step_size *= 1. - granularity;
-        // std::cerr << "Decreasing step size to " << _step_size << std::endl;
     } else if(a > 1.2 * accept_target) {
         _step_size *= 1. + granularity;
-        // std::cerr << "Increasing step size to " << _step_size << std::endl;
+    }
+}
+
+
+void MHSampler::tune_all(const MHTuningParameters& p) {
+    for(int n=0; n<p.n_rounds; n++) {
+        // Take multiple steps, and then tune either
+        // the step size or the proposal covariance.
+        for(int k=0; k<p.n_steps_per_round; k++) {
+            step();
+        }
+        if(n & 1) {
+            tune_step_size(p.accept, p.granularity);
+        } else {
+            update_proposal(p.prop_persist, p.prop_epsilon);
+        }
+        // Clear the chain, but keep swap statistics intact.
+        clear_chain();
     }
 }
 
