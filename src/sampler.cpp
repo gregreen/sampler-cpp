@@ -1,5 +1,7 @@
 
 #include "sampler.h"
+namespace sampler {
+
 // #include <iostream>
 
 /*
@@ -182,3 +184,6 @@ std::pair<shared_vector, shared_vector> Chain::calc_histogram(
         uint axis, double x0, double x1, uint n_bins, bool normalize) const {
     return weighted_histogram(_x, _w, _n_dim, axis, x0, x1, n_bins, normalize);
 }
+
+
+} // namespace sampler

@@ -1,5 +1,6 @@
 
 #include "ptsampler.h"
+namespace sampler {
 
 
 pdensity apply_temperature(pdensity lnp, double beta) {
@@ -249,3 +250,6 @@ double PTSampler::swap_accept_frac() const {
 shared_const_vector PTSampler::get_beta() const {
     return _beta;
 }
+
+
+} // namespace sampler

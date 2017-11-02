@@ -10,6 +10,9 @@
 #include "mhsampler.h"
 
 
+namespace sampler {
+
+
 pdensity apply_temperature(pdensity lnp, double beta);
 
 
@@ -97,4 +100,5 @@ private:
 
 
 
+} // namespace sampler
 #endif /* end of include guard: _PTSAMPLER_H__ */

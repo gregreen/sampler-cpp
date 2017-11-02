@@ -5,6 +5,10 @@
 #include <memory>
 #include <Eigen/Dense>
 
+
+namespace sampler {
+
+
 // Probability density function. f : R^N -> R.
 typedef std::function<double(double*)> pdensity;
 
@@ -24,4 +28,6 @@ typedef std::shared_ptr<const MatrixNxM> shared_const_matrix;
 // Function that outputs a shared vector: f : -> R^N
 typedef std::function<shared_vector()> vector_generator;
 
+
+} // namespace sampler
 #endif /* end of include guard: _CUSTOM_TYPES_H__ */

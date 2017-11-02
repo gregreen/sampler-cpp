@@ -1,5 +1,6 @@
 
 #include "rand_helpers.h"
+namespace sampler {
 
 
 BasicRandGenerator::BasicRandGenerator() {
@@ -136,3 +137,6 @@ Eigen::VectorXd MultivariateNormalGenerator::draw() {
 shared_const_matrix MultivariateNormalGenerator::get_covariance() const {
     return _sigma;
 }
+
+
+} // namespace sampler

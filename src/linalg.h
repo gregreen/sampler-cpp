@@ -9,6 +9,9 @@
 #include "custom_types.h"
 
 
+namespace sampler {
+
+
 shared_vector weighted_mean(shared_const_vector x,
                             shared_const_vector w,
                             int n_dim);
@@ -25,4 +28,5 @@ std::pair<shared_vector, shared_vector> weighted_histogram(
         bool normalize=false);
 
 
+} // namespace sampler
 #endif /* end of include guard: _LINALG_H__ */

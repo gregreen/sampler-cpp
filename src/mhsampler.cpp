@@ -1,5 +1,6 @@
 
 #include "mhsampler.h"
+namespace sampler {
 
 
 MHSampler::MHSampler(pdensity lnL, pdensity ln_prior, uint n_dim)
@@ -169,3 +170,6 @@ shared_const_matrix MHSampler::get_proposal_cov() const {
 double MHSampler::accept_frac() const {
     return (double)_n_accepted / (double)(_n_accepted + _n_rejected);
 }
+
+
+} // namespace sampler
