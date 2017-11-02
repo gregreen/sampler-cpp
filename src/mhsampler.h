@@ -19,6 +19,9 @@
 #include "custom_types.h"
 
 
+namespace sampler {
+
+
 struct MHTuningParameters {
     int n_rounds=100;
     int n_steps_per_round=100;
@@ -96,4 +99,5 @@ private:
 
 
 
+} // namespace sampler
 #endif /* end of include guard: _MHSAMPLER_H__ */

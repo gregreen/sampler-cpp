@@ -52,6 +52,8 @@
 
 #include "catch.hpp"
 
+using namespace sampler;
+
 
 TEST_CASE( "Sample from a multi-well potential using the Parallel Tempering sampler.", "[sampler][pt]") {
     // Basic parameters of the distribution

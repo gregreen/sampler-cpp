@@ -38,6 +38,8 @@
 #include "../src/linalg.h"
 #include "../src/rand_helpers.h"
 
+using namespace sampler;
+
 
 // Returns a log probability density function with peaks at x = +- 1.
 // Higher gamma -> peaks are sharper (and more isolated).

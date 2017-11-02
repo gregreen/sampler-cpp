@@ -11,6 +11,9 @@
 #include "linalg.h"
 
 
+namespace sampler {
+
+
 class State {
 public:
     State(uint n_dim);
@@ -54,7 +57,7 @@ public:
 
     shared_matrix calc_covariance() const;
     shared_vector calc_mean() const;
-    
+
     std::pair<shared_vector, shared_vector> calc_histogram(
         uint axis, double x0, double x1, uint n_bins, bool normalize=false) const;
 
@@ -67,4 +70,5 @@ private:
 };
 
 
+} // namespace sampler
 #endif /* end of include guard: _SAMPLER_H__ */

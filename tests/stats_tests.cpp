@@ -52,6 +52,9 @@
 
 #include "catch.hpp"
 
+using namespace sampler;
+
+
 /*
  * Check basic statistics routines
  */

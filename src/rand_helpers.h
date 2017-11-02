@@ -7,6 +7,9 @@
 #include "custom_types.h"
 
 
+namespace sampler {
+
+
 class BasicRandGenerator {
 public:
     BasicRandGenerator();
@@ -53,4 +56,5 @@ private:
 };
 
 
+} // namespace sampler
 #endif // _RAND_HELPERS_H__

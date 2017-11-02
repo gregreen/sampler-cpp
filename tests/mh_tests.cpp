@@ -52,6 +52,8 @@
 
 #include "catch.hpp"
 
+using namespace sampler;
+
 
 TEST_CASE( "Sample from a multivariate Gaussian with the Metropolis-Hastings sampler.", "[sampler][mh]") {
     // Set up the probability density function

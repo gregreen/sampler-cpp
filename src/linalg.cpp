@@ -1,5 +1,6 @@
 
 #include "linalg.h"
+namespace sampler {
 
 
 shared_vector weighted_mean(shared_const_vector x,
@@ -94,3 +95,6 @@ std::pair<shared_vector, shared_vector> weighted_histogram(
     // Return pair: (bin edges, histogram values)
     return std::make_pair(edges, hist);
 }
+
+
+} // namespace sampler
