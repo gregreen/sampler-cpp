@@ -115,7 +115,6 @@ TEST_CASE( "Sample from a multi-well potential using the Parallel Tempering samp
     for(int temp_idx=0; temp_idx<n_temperatures; temp_idx++) {
         std::shared_ptr<const MHSampler> s = sampler.get_sampler(temp_idx);
         REQUIRE( fabs(s->accept_frac() - p.step_accept) < 0.25 * p.step_accept + 0.02 );
-
     }
 
     REQUIRE( fabs( sampler.swap_accept_frac() - p.swap_accept ) < 0.25 * p.swap_accept + 0.02 );

@@ -159,7 +159,7 @@ void PTSampler::tune_all(const PTTuningParameters& p) {
             // Take a swap step
             swap();
 
-            // Clear the chain, but keep swap statistics intact
+            // Clear the chain, but keep swap statistics intact.
             clear_chain(false);
         }
 
